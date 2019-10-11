@@ -1,18 +1,17 @@
 # GRANDstack Starter - GraphQL API
 
-
 ## Quick Start
 
 Install dependencies:
 
 ```
-npm install
+yarn
 ```
 
 Start the GraphQL service:
 
 ```
-npm start
+yarn start
 ```
 
 This will start the GraphQL service (by default on localhost:4000) where you can issue GraphQL requests or access GraphQL Playground in the browser:
@@ -45,10 +44,10 @@ now
 
 to deploy your GraphQL service on Zeit Now. Once deployed you'll be given a fresh URL that represents the current state of your application where you can access your GraphQL endpoint and GraphQL Playgound. For example: https://grand-stack-starter-api-pqdeodpvok.now.sh/
 
-## Seeding The Database
+## Seeding the Database
 
 Optionally you can seed the GraphQL service by executing mutations that will write sample data to the database:
 
 ```
-npm run seedDb
+yarn seed-db
 ```
