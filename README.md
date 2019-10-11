@@ -35,13 +35,13 @@ A good tutorial can be found here: https://www.youtube.com/watch?v=rPC71lUhK_I
 *Install dependencies*
 
 ```
-(cd ./ui && npm install)
-(cd ./api && npm install)
+(cd ./ui && yarn)
+(cd ./api && yarn)
 ```
 
 *Start API server*
 ```
-cd ./api && npm start
+cd ./api && yarn start
 ```
 
 ![](api/img/graphql-playground.png)
@@ -52,7 +52,7 @@ This will start the GraphQL API in the foreground, so in another terminal sessio
 
 *Start UI server*
 ```
-cd ./ui && npm start
+cd ./ui && yarn start
 ```
 
 ![](ui/img/default-app.png)
@@ -101,9 +101,8 @@ docker-compose up -d
 
 If you want to load the example DB after the services have been started:
 ```
-docker-compose run api npm run seedDb
+docker-compose run api yarn seed-db
 ```
 
-
-This project is licensed under the Apache License v2.
+This project is licensed under the [Apache License v2](./LICENSE.txt).
 Copyright (c) 2018 Neo4j, Inc.
