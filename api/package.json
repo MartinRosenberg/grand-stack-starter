@@ -2,17 +2,28 @@
   "name": "grand-stack-starter-api",
   "version": "0.0.1",
   "description": "API app for GRANDstack",
+  "license": "MIT",
+  "author": "William Lyon",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "./node_modules/.bin/nodemon --watch src --ext js,graphql --exec babel-node  src/index.js",
     "build": "babel src -d build; cp .env build; cp src/schema.graphql build",
     "now-build": "babel src -d build; cp .env build; cp src/schema.graphql build",
+    "seedDb": "./node_modules/.bin/babel-node src/seed/seed-db.js",
     "start": "npm run build && node build/index.js",
-    "seedDb": "./node_modules/.bin/babel-node src/seed/seed-db.js"
+    "start-dev": "./node_modules/.bin/nodemon --watch src --ext js,graphql --exec babel-node  src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "William Lyon",
-  "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,graphql": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "apollo-boost": "^0.3.1",
     "apollo-cache-inmemory": "^1.6.3",
@@ -31,16 +42,5 @@
     "husky": "^1.3.1",
     "lint-staged": "^8.2.1",
     "nodemon": "^1.19.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md,graphql": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }

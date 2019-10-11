@@ -1,0 +1,20 @@
+{
+  "name": "grand-stack-starter",
+  "private": true,
+  "homepage": "https://github.com/MartinRosenberg/grand-stack-starter#readme",
+  "bugs": {
+    "url": "https://github.com/MartinRosenberg/grand-stack-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinRosenberg/grand-stack-starter.git"
+  },
+  "license": "Apache-2.0",
+  "workspaces": [
+    "api",
+    "ui"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
