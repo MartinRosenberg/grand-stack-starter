@@ -2,28 +2,12 @@
   "name": "grand-stack-starter-ui",
   "version": "0.0.1",
   "description": "UI app for GRANDstack",
-  "dependencies": {
-    "@material-ui/core": "^4.2.1",
-    "@material-ui/icons": "^4.2.1",
-    "apollo-boost": "^0.3.1",
-    "graphql": "^14.4.2",
-    "graphql-tag": "^2.10.1",
-    "prettier": "^1.18.2",
-    "react": "^16.9.0",
-    "react-apollo": "^2.5.8",
-    "react-dom": "^16.9.0",
-    "react-scripts": "^3.1.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "now-build": "react-scripts build"
-  },
-  "devDependencies": {
-    "husky": "^2.7.0",
-    "lint-staged": "^8.2.1"
+    "now-build": "react-scripts build",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
   },
   "husky": {
     "hooks": {
@@ -41,5 +25,21 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.2.1",
+    "apollo-boost": "^0.3.1",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.9.0",
+    "react-scripts": "^3.1.1"
+  },
+  "devDependencies": {
+    "husky": "^2.7.0",
+    "lint-staged": "^8.2.1"
+  }
 }
