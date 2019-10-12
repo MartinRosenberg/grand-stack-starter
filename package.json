@@ -15,10 +15,16 @@
     "ui"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api": "yarn workspace grand-stack-starter-api",
+    "start": "concurrently 'yarn api start' 'yarn ui start'",
+    "test": "concurrently 'yarn api test' 'yarn ui test'",
+    "ui": "yarn workspace grand-stack-starter-ui"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0"
   },
   "engines": {
-    "yarn": ">=1.13.0",
-    "node": ">=10.0.0"
+    "node": ">=10.0.0",
+    "yarn": ">=1.13.0"
   }
 }
